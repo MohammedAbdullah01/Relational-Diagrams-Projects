@@ -19,7 +19,7 @@ go
 create table Patients 
 (
 	id int primary key identity(1,1),
-	personeId int ,
+	personeId int not null ,
 	constraint Fk_Patient_Persone 
 	foreign key (personeId) 
 	references Persones (id)
@@ -29,7 +29,7 @@ create table Doctors
 (
 	id int primary key identity (1,1),
 	specialization nvarchar(100) not null,
-	personeId int,
+	personeId int not null,
 	constraint FK_Doctor_Persone foreign key (personeId) references persones(id)
 )
 go 
@@ -38,7 +38,7 @@ create table MedicalRecords
 	id int primary key identity(1,1),
 	vistDescription nvarchar(255) not null,
 	diagnosis nvarchar(255) not null,
-	notes nvarchar(255) not null
+	notes nvarchar(255)
 )
 go 
 create table Payments
@@ -55,8 +55,8 @@ create table Appointments
 	id int primary key identity(1,1),
 	AppointmentsStatus tinyint not null,
 	AppointmentsDateTime dateTime not null,
-	patientiD int ,
-	doctorID int ,
+	patientiD int not null ,
+	doctorID int  not null,
 	MedicalRecordID int ,
 	PaymentID int ,
 	constraint FK_Patient foreign key (patientiD) references Patients (id),
@@ -69,12 +69,12 @@ create table Prescriptions
 (
 	id int primary key identity(1,1),
 	medicationName nvarchar(100) not null,
-	 dosage nvarchar(50) not null,
+	dosage nvarchar(50) not null,
 	frequency nvarchar(50) not null,
 	startDate date not null,
 	endDate date not null,
 	specialInstructions nvarchar(255),
-	medicalRecordID int,
+	medicalRecordID int not null,
 	
 	constraint FK_Prescriptions_MedicalRecord foreign key (MedicalRecordID) references MedicalRecords (id)
 )
