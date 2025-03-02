@@ -107,3 +107,5 @@ create table BeltTests
 	constraint FK_BeltTest_Payment foreign key (paymentID) references Payments (id)
 )
 go
+
+restore database KarateClub from disk = 'C:\KarateClub.bak'
