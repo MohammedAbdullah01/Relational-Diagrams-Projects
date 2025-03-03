@@ -110,18 +110,6 @@ A comprehensive e-commerce database system for managing product inventory, custo
 
 Each project folder contains:
 - Entity Relationship Diagram (ERD)
-- SQL script for database creation
+- SQL script for each project 
 - Sample queries for common operations
 - Data dictionary explaining each table and field
-
-## Contributing
-
-Please follow these steps to contribute:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request with a detailed description of your changes
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
