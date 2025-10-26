@@ -1,115 +1,127 @@
-# Relational Schema Projects
+# 🧩 Relational Database Diagrams Collection
 
-This repository contains the database schemas for five different projects: Clinic Management System, Car Rental System, Karate Club Management System, Library Management System, and Online Store Management System. Each schema is designed to meet specific business requirements outlined below.
+This repository contains a collection of **six real-world relational database designs**, each with a complete **Entity Relationship Diagram (ERD)** and a ready-to-run **SQL script** that automatically creates the database schema.
 
-## 1. Clinic Management System
+Each system models a different business domain and demonstrates strong understanding of **relational modeling**, **normalization**, and **SQL implementation** — providing a practical foundation for backend development and data-driven applications.
 
-### Overview
-A comprehensive database system designed to manage patient information, doctor details, appointments, medical records, prescriptions, and payment processing for a healthcare clinic.
+---
 
-### Features
-- **Patient Management**: Store and track patient information including unique identifiers, personal details, contact information, and addresses.
-- **Doctor Management**: Maintain comprehensive records of healthcare providers including specializations and contact details.
-- **Appointment Scheduling**: Track appointment status through various states (Pending, Confirmed, Completed, Canceled, Rescheduled, No Show).
-- **Medical Records**: Document patient visits, diagnoses, and treatments linked to specific appointments.
-- **Prescription Management**: Record medication details, dosage instructions, and treatment durations.
-- **Payment Processing**: Track payment information for appointments including payment methods and amounts.
+## 🔗 Quick Access
 
-### Entity Relationships
-- Each patient can have multiple appointments
-- Each doctor can have multiple appointments
-- Each appointment is linked to exactly one medical record
-- Each medical record can have up to one prescription
-- Each appointment has one payment record
+- [Airline Management System](./Airline/README.md)
+- [Car Rental System](./CarRental/README.md)
+- [Clinic Management System](./Clinic/README.md)
+- [Karate Club Management System](./KarateClub/README.md)
+- [Library Management System](./Library/README.md)
+- [Online Store Database](./OnlineStore/README.md)
 
-## 2. Car Rental System
+---
 
-### Overview
-A database system for managing vehicle rentals, customer information, bookings, and payment transactions.
+## 📁 Projects Overview
 
-### Features
-- **Customer Management**: Store personal information, contact details, and driver's license data.
-- **Vehicle Inventory**: Track detailed vehicle information including make, model, year, mileage, rental rates, fuel type, plate number, and category.
-- **Booking Management**: Record rental periods, pickup/dropoff locations, and initial cost estimates.
-- **Transaction Processing**: Document payment details and track initial paid amounts.
-- **Vehicle Return Processing**: Calculate actual rental duration, record final condition checks, determine additional charges, and manage refunds.
-- **Mileage Tracking**: Monitor vehicle usage by calculating the difference between initial and final mileage.
+### ✈️ **Airline Management System**
+Database design for managing airlines, aircrafts, routes, employees, and transactions.  
+Includes a complete ERD and SQL script for automatic database creation.  
+Demonstrates solid understanding of relational modeling and data integrity.
 
-### Entity Relationships
-- Each customer can have multiple bookings
-- Each vehicle can be booked multiple times (not simultaneously)
-- Each booking has one transaction record
-- Each booking has one vehicle return record
+🔹 *Files:*  
+- `Airline_Relational Diagram.png`  
+- `Airline.sql`
+- `Airline-Requirements`
+- `README.md`
 
-## 3. Karate Club Management System
+---
 
-### Overview
-A database system designed to manage memberships, instructors, belt ranks, testing, and payment processing for a karate club.
+### 🚗 **Car Rental System**
+Relational database for managing cars, customers, reservations, and payments.  
+Comes with both ERD and SQL script to instantly generate the schema.  
+Built to ensure consistency, normalization, and efficient data flow.
 
-### Features
-- **Membership Management**: Store member profiles, contact information, emergency contacts, and track membership status and subscription periods.
-- **Instructor Management**: Maintain instructor profiles including qualifications and training assignments.
-- **Belt Rank System**: Support a comprehensive 17-level belt system from White Belt to Black Belt (10th Dan).
-- **Testing Management**: Track belt test dates, results, and examining instructors.
-- **Payment Processing**: Manage both membership fees and belt test fees with payment history tracking.
+🔹 *Files:*  
+- `CarRental_Relational Diagram.png`  
+- `CarRental.sql`
+- `Airline-Requirements`
+- `README.md`
 
-### Entity Relationships
-- Members can train with multiple instructors
-- Instructors can train multiple members
-- Each member has a current belt rank
-- Members participate in belt tests to advance ranks
-- Members make payments for both subscriptions and tests
+---
 
-## 4. Library Management System
+### 🏥 **Clinic Management System**
+Structured ERD and SQL script for doctors, patients, appointments, and billing.  
+Models realistic healthcare relationships with proper foreign key design.  
+Focuses on data normalization and referential integrity.
 
-### Overview
-A database system for managing book inventory, user accounts, borrowing operations, reservations, and fine collection.
+🔹 *Files:*  
+- `Clinic_Relational Diagram.png`  
+- `Clinic.sql`
+- `Clinic-Requirements`
+- `README.md`
 
-### Features
-- **Book Management**: Track detailed book information and maintain multiple copies with unique identifiers.
-- **User Account Management**: Store user profiles and library card information.
-- **Borrowing Process**: Record borrowing history, due dates, and manage the return process.
-- **Reservation System**: Enable users to place holds on checked-out books with queue management.
-- **Fine Management**: Calculate late return penalties, track outstanding balances, and record payment status.
+---
 
-### Entity Relationships
-- Each book can have multiple copies
-- Users can borrow multiple book copies
-- Users can place multiple holds
-- Each borrowed copy can have associated fines
-- Each user can have multiple fine records
+### 🥋 **Karate Club Management System**
+ERD and SQL database for managing members, trainers, sessions, and belt levels.  
+Tracks performance and membership progression efficiently.  
+Shows understanding of structured relational design and data organization.
 
-## 5. Online Store Management System
+🔹 *Files:*  
+- `KarateClub_Relational Diagram.png`  
+- `KarateClub.sql`
+- `KarateClub-Requirements`
+- `README.md`
 
-### Overview
-A comprehensive e-commerce database system for managing product inventory, customer accounts, order processing, payments, shipping, and product reviews.
+---
 
-### Features
-- **Product Catalog**: Store detailed product information including descriptions, pricing, stock levels, and images.
-- **Customer Management**: Maintain customer profiles, contact details, shipping addresses, and login credentials.
-- **Order Processing**: Track orders through multiple statuses (Pending, Processing, Shipped, Delivered, Cancelled, Refunded).
-- **Payment Management**: Record transaction details, payment methods, and timestamps.
-- **Shipping System**: Track shipping carriers, delivery statuses, and estimated/actual delivery dates.
-- **Review System**: Store customer product ratings and reviews with timestamp tracking.
+### 📚 **Library Management System**
+Database model for books, members, loans, and authors.  
+Includes ERD and SQL script for instant schema generation.  
+Ensures clear entity relationships and consistent borrowing records.
 
-### Entity Relationships
-- Customers can place multiple orders
-- Orders contain multiple products
-- Each order has one payment transaction
-- Each order has one shipping record
-- Customers can write multiple product reviews
+🔹 *Files:*  
+- `Library_Relational Diagram.png`  
+- `Library.sql`
+- `Library-Requirements`
+- `README.md`
 
-## Installation and Setup
+---
 
-1. Choose a relational database management system (MySQL, PostgreSQL, SQL Server, etc.)
-2. Create the database using the provided SQL scripts
-3. Configure connection settings for your application
-4. Implement the necessary business logic to interact with the database
+### 🛒 **Online Store Database**
+Relational design for an e-commerce system with products, orders, and payments.  
+Includes ERD and SQL script for automatic schema creation.  
+Highlights transactional data flow and normalization principles.
 
-## Documentation
+🔹 *Files:*  
+- `OnlineStore_Relational Diagram.png`  
+- `OnlineStore.sql`
+- `OnlineStore-Requirements`
+- `README.md`
 
-Each project folder contains:
-- Entity Relationship Diagram (ERD)
-- SQL script for each project 
-- Sample queries for common operations
-- Data dictionary explaining each table and field
+---
+
+## 🧠 Key Concepts Practiced
+- Entity Relationship Modeling  
+- Primary and Foreign Keys  
+- One-to-Many and Many-to-Many Relationships  
+- Data Normalization (1NF → 3NF)  
+- Referential Integrity and Constraints  
+- SQL Server Database Creation and Management
+
+---
+
+## 💡 How to Use
+1. Open the desired SQL script (e.g., `Airline_Database.sql`).
+2. Run it in **SQL Server Management Studio (SSMS)** or any SQL environment.
+3. The script will automatically create the database structure with all defined tables and relationships.
+
+---
+
+## 📜 License
+This project is open-source and available for educational and learning purposes.  
+Feel free to explore, modify, and expand the designs for your own projects.
+
+---
+
+## 👨‍💻 Author
+**Mohammed Abdullah**  
+Backend Software Engineer | .NET & ASP.NET Core Developer  
+📂 [GitHub Portfolio](https://github.com/MohammedAbdullah01)  
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/mohammed-al-dabari-9301ba1a8/)
